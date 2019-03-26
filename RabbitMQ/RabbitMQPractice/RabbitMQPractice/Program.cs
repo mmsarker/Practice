@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RabbitMQ.Client;
+using System;
 
 namespace RabbitMQPractice
 {
@@ -6,8 +7,8 @@ namespace RabbitMQPractice
     {
         static void Main(string[] args)
         {
+            new RabbitMQTest().CreateConnection();
             new Consumer().Consume();
-           // new RabbitMQTest().CreateConnection();            
 
             Console.WriteLine("Hello World!");
             Console.ReadKey();
